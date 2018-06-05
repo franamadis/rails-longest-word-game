@@ -1,0 +1,21 @@
+
+<div class="container">
+<h1>RESULT</h1>
+<% if @included && @english %>
+  <h2>Congratulations <%= @word %> is an English word </h2>
+   <% elsif @included || @english %> 
+       <% if @included %> 
+       <h2>Ooops <%= @word %> is not an English word </h2>
+         <% elsif @english %> 
+          <h2>Ooops <%= @word %> is English but not contained </h2>
+    <% end %>
+    <% else %>
+
+<h2>The word <%= @word %> is NOT english and NOT contained </h2>
+    <% end %> 
+
+
+
+<%= link_to "Play Again", "new" %> 
+</div
+>
